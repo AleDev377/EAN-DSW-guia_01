@@ -1,0 +1,15 @@
+@startuml
+
+class Fraccionario {
+    - numerador: int
+    - denominador: int
+    
+    + Fraccionario(numerador: int, denominador: int)
+    + getNumerador(): int
+    + setNumerador(numerador: int): void
+    + getDenominador(): int
+    + setDenominador(denominador: int): void
+    + getFraccionario(): double
+}
+
+@enduml

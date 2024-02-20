@@ -1,0 +1,18 @@
+@startuml
+
+class Fecha {
+    - año: int
+    - mes: int
+    - dia: int
+    
+    + Fecha(año: int, mes: int, dia: int)
+    + getFechaCompleta(): String
+    + getAño(): int
+    + setAño(año: int): void
+    + getMes(): int
+    + setMes(mes: int): void
+    + getDia(): int
+    + setDia(dia: int): void
+}
+
+@enduml

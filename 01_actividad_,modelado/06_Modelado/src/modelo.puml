@@ -1,0 +1,36 @@
+@startuml
+
+abstract class Persona {
+    -String nombre
+    -int edad
+    +Persona(String nombre, int edad)
+    +String getNombre()
+    +int getEdad()
+    +void setNombre(String nombre)
+    +void setEdad(int edad)
+}
+
+class Estudiante {
+    -int codigoEstudiante
+    -String carrera
+    +Estudiante(String nombre, int edad, int codigoEstudiante, String carrera)
+    +int getCodigoEstudiante()
+    +String getCarrera()
+    +void setCodigoEstudiante(int codigoEstudiante)
+    +void setCarrera(String carrera)
+}
+
+class Profesor {
+    -int codigoProfesor
+    -String departamento
+    +Profesor(String nombre, int edad, int codigoProfesor, String departamento)
+    +int getCodigoProfesor()
+    +String getDepartamento()
+    +void setCodigoProfesor(int codigoProfesor)
+    +void setDepartamento(String departamento)
+}
+
+Persona <|-- Estudiante
+Persona <|-- Profesor
+
+@enduml

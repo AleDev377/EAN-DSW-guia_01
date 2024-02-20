@@ -1,0 +1,70 @@
+@startuml
+
+class Tienda {
+    - nombre: String
+    - direccion: String
+    - telefono: String
+    
+    + Tienda(nombre: String, direccion: String, telefono: String)
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getDireccion(): String
+    + setDireccion(direccion: String): void
+    + getTelefono(): String
+    + setTelefono(telefono: String): void
+}
+@startuml
+
+class Tienda {
+    - nombre: String
+    - direccion: String
+    - telefono: String
+    - List<Producto> productos
+    
+    + Tienda(nombre: String, direccion: String, telefono: String)
+    + agregarProducto(Producto producto)
+    + List<Producto> getProductos()
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getDireccion(): String
+    + setDireccion(direccion: String): void
+    + getTelefono(): String
+    + setTelefono(telefono: String): void
+}
+
+class Producto {
+    - codigo: int
+    - nombre: String
+    - tipo: TipoProducto
+    - fechaExpiracion: Date
+    - fabricante: String
+    - cantidadInventario: int
+    - precioUnitario: double
+    
+    + Producto()
+    + setCodigo(codigo: int): void
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getTipo(): TipoProducto
+    + setTipo(tipo: TipoProducto): void
+    + getFechaExpiracion(): Date
+    + setFechaExpiracion(fechaExpiracion: Date): void
+    + getFabricante(): String
+    + setFabricante(fabricante: String): void
+    + getCantidadInventario(): int
+    + setCantidadInventario(cantidadInventario: int): void
+    + getPrecioUnitario(): double
+    + setPrecioUnitario(precioUnitario: double): void
+}
+
+enum TipoProducto {
+    LACTEO, CARNICO, FRUTA, ENLATADO
+}
+
+TipoProducto "1" -- "1" Producto: pertenece
+Tienda "1" -- "1..4" Producto : ofrece
+
+
+@enduml
+
+

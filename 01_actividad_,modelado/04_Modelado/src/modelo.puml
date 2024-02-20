@@ -1,0 +1,15 @@
+@startuml
+
+class Proyectil {
+    - velocidad: double
+    - angulo: double
+    
+    + Proyectil(velocidad: double, angulo: double)
+    + getDistancia(): double
+    + getVelocidad(): double
+    + setVelocidad(velocidad: double): void
+    + getAngulo(): double
+    + setAngulo(angulo: double): void
+}
+
+@enduml

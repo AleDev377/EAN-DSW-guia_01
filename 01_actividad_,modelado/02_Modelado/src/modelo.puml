@@ -1,0 +1,18 @@
+@startuml
+
+class Reloj {
+    - hora: int
+    - minutos: int
+    - segundos: int
+    
+    + Reloj(hora: int, minutos: int, segundos: int)
+    + getHora(): int
+    + setHora(hora: int): void
+    + getMinutos(): int
+    + setMinutos(minutos: int): void
+    + getSegundos(): int
+    + setSegundos(segundos: int): void
+    + getHoraCompleta(): String
+}
+
+@enduml
